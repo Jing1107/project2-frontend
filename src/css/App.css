@@ -558,3 +558,8 @@ a:focus, a:hover, a:active {
     margin: 0 1rem;
   }
 }
+
+.img-fluid {
+  height: 300px;
+  width: 300px;
+}

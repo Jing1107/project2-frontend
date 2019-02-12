@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import carbin from './../img/portfolio/cabin.png';
-import cake from './../img/portfolio/cake.png';
-import circus from './../img/portfolio/circus.png';
+import tictac from './../img/portfolio/tic-tac.png';
+import gomoku1 from './../img/portfolio/gomoku1.png';
+import coming1 from './../img/portfolio/coming1.png';
 
 
 
@@ -20,7 +20,7 @@ class Portfolio extends Component {
                     <i className="fas fa-search-plus fa-3x"></i>
                     </div>
                   </div>
-                  <img className="img-fluid" src={carbin} />
+                  <img className="img-fluid" src={tictac} />
                 </a>
               </div>
               <div className="col-md-6 col-lg-4">
@@ -30,7 +30,7 @@ class Portfolio extends Component {
                       <i className="fas fa-search-plus fa-3x"></i>
                     </div>
                   </div>
-                  <img className="img-fluid" src={cake} />
+                  <img className="img-fluid" src={gomoku1} />
                 </a>
               </div>
               <div className="col-md-6 col-lg-4">
@@ -40,7 +40,7 @@ class Portfolio extends Component {
                       <i className="fas fa-search-plus fa-3x"></i>
                     </div>
                   </div>
-                  <img className="img-fluid" src={circus} />
+                  <img className="img-fluid" src={coming1} />
                 </a>
               </div>
             </div>

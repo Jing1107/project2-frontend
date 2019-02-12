@@ -9,7 +9,7 @@ class Contact extends Component {
           <hr className="star-dark mb-5" />
           <div className="row">
             <div className="col-lg-8 mx-auto">
-              <form name="sentMessage" id="contactForm" novalidate="novalidate">
+              <form name="sentMessage" id="contactForm" noValidate="novalidate">
                 <div className="control-group">
                   <div className="form-group floating-label-form-group controls mb-0 pb-2">
                     <label>Name</label>
