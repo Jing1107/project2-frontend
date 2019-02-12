@@ -10,7 +10,7 @@ class Portfolio extends Component {
     return (
       <section className="portfolio" id="portfolio">
         <div className="container">
-          <h2 className="text-center text-uppercase text-secondary mb-0">Portfolio</h2>
+          <h2 className="text-center text-uppercase text-secondary mb-0">Game</h2>
             <hr className="star-dark mb-5" />
             <div className="row">
               <div className="col-md-6 col-lg-4">

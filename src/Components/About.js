@@ -19,7 +19,7 @@ class About extends Component {
           <div class="text-center mt-4">
             <a class="btn btn-xl btn-outline-light" href="#">
               <i class="fas fa-download mr-2"></i>
-              Download Now!
+              Game Arena
             </a>
           </div>
         </div>

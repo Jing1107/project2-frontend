@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 //import logo from './../img/profile.png';
-import logo from './../img/logo.svg';
+import logo from './../img/cool2.gif';
 
 class Header extends Component {
   render () {
@@ -11,7 +11,7 @@ class Header extends Component {
 
           <h1 className="text-uppercase mb-0">Welcome to Game Arena</h1>
           <hr className="star-light" />
-          
+
         </div>
       </header>
     );

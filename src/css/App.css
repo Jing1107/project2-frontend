@@ -387,19 +387,174 @@ a:focus, a:hover, a:active {
   padding-bottom: 1em;
 }
 
-.bg  {
+
+
+.heart-loader {
   position: absolute;
-  top: 50%;
+  display: block;
   left: 50%;
-  transform: translate(-50%, -50%);
-}
+  top: 50%;
+  margin-top: $size/-2;
+  width: 180px;
+  height: 180px;
+  overflow: visible;
 
-.path {
-  animation: draw 3.5s infinite;
-}
+  &__group {
+    transform-origin: 0 90px;
+    animation: group-anim 7s 1s infinite;
+  }
 
- @keyframes draw {
-  50% {
+  &__square {
+    stroke: pink;
+    stroke-dasharray: 240, 240;
+    stroke-dashoffset: 240;
+    animation: square-anim 7s 1s infinite;
+  }
+
+  &__circle {
+    stroke: pink;
+    stroke-dasharray: 188.522, 188.522;
+    stroke-dashoffset: 188.522;
+    transform-origin: 60px 60px/2;
+
+    &.m--left {
+      animation: left-circle-anim 7s 1s infinite;
+    }
+
+    &.m--right {
+      animation: right-circle-anim 7s 1s infinite;
+    }
+  }
+
+  &__heartPath {
+    stroke: red;
+    fill: transparent;
+    stroke-dasharray: 308.522, 308.522;
+    stroke-dashoffset: 308.522;
+    animation: heart-anim 7s 1s infinite;
+  }
+}
+@keyframes square-anim {
+  12% {
     stroke-dashoffset: 0;
+  }
+  43% {
+    stroke-dashoffset: 0;
+    opacity: 1;
+  }
+  85% {
+    stroke-dashoffset: 0;
+    opacity: 0;
+  }
+  100% {
+    stroke-dashoffset: 0;
+    opacity: 0;
+  }
+}
+@keyframes left-circle-anim {
+  12% {
+    stroke-dashoffset: 188.522;
+  }
+  31% {
+    stroke-dashoffset: 0;
+    transform: translateY(0);
+  }
+  41% {
+    stroke-dashoffset: 0;
+    transform: translateY(60px/-2);
+  }
+  43% {
+    stroke-dashoffset: 0;
+    transform: translateY(60px/-2);
+    opacity: 1;
+  }
+  85% {
+    stroke-dashoffset: 0;
+    transform: translateY(60px/-2);
+    opacity: 0;
+  }
+  100% {
+    stroke-dashoffset: 0;
+    transform: translateY(60px/-2);
+    opacity: 0;
+  }
+}
+@keyframes right-circle-anim {
+  12% {
+    stroke-dashoffset: 188.522;
+  }
+  31% {
+    stroke-dashoffset: 0;
+    transform: translateX(0);
+  }
+  41% {
+    stroke-dashoffset: 0;
+    transform: translateX(60px/2);
+  }
+  43% {
+    stroke-dashoffset: 0;
+    transform: translateX(60px/2);
+    opacity: 1;
+  }
+  85% {
+    stroke-dashoffset: 0;
+    transform: translateX(60px/2);
+    opacity: 0;
+  }
+  100% {
+    stroke-dashoffset: 0;
+    transform: translateX(60px/2);
+    opacity: 0;
+  }
+}
+@keyframes group-anim {
+  43% {
+    transform: rotate(0);
+  }
+  54% {
+    transform: rotate(-45deg);
+  }
+  90% {
+    transform: rotate(-45deg);
+    opacity: 1;
+  }
+  97% {
+    transform: rotate(-45deg);
+    opacity: 0;
+  }
+  100% {
+    transform: rotate(-45deg);
+    opacity: 0;
+  }
+}
+@keyframes heart-anim {
+  55% {
+    stroke-dashoffset: 308.522;
+    fill: transparent;
+  }
+  70% {
+    stroke-dashoffset: 0;
+    fill: transparent;
+  }
+  87% {
+    stroke-dashoffset: 0;
+    fill: red;
+  }
+  100% {
+    stroke-dashoffset: 0;
+    fill: red;
+  }
+}
+
+.other {
+  position: absolute;
+  left: 0;
+  bottom: 0.5rem;
+  width: 100%;
+  text-align: right;
+
+  &__link {
+    font-size: 1.3rem;
+    margin: 0 1rem;
   }
 }
